@@ -1,28 +1,88 @@
 # 🧭 Project Analysis
 Brief Decription
 
+Internship project at Showz Analytics Department, focused on optimizing marketing expenses through data-driven insights from web traffic, orders, and marketing spend data.
+
 ---
 
 ## 🔍 Project Overview (P-202YMMDD_Name)
 
 Project Overview
 
+This project analyzes user behavior, sales patterns, and marketing investments for Showz, a company specializing in event ticket sales. Using server logs, order history, and marketing spend data from January 2017 to December 2018, the goal is to evaluate how customers interact with the platform, when they start purchasing, how much revenue they generate, and how marketing costs impact profitability.
+
+The analysis follows three main steps:
+
+1. Data preparation – loading and cleaning datasets (visits, orders, and costs).   
+2. Metric calculations and reporting – exploring user activity, conversions, sales performance, and marketing efficiency.   
+3. Conclusions and recommendations – advising the marketing team on where and how to best allocate their budget.   
+
 Key questions:
 
 - Objectives to reach
 
+  - User Behavior:
+    - How many people use the service daily, weekly, and monthly?   
+    - How many sessions per day and what is their average duration?
+    - How often do users return?
+
+  - Sales Performance:
+    - When do users start making purchases after registration?
+    - How many orders do they place over time?
+    - What is the average purchase size?
+    - What is the customer lifetime value (LTV)?
+
+  - Marketing Efficiency:
+    - How much money was spent overall, by source, and over time?
+    - What is the customer acquisition cost (CAC) for each source?
+    - How profitable are the investments (ROMI)?
+
 Project Info explanation
 
-__Note__: key info
+- Datasets:
+    - DataSets/visits_log_us.csv → User visits with session timestamps, device, and acquisition source.
+    - DataSets/orders_log_us.csv → Orders with user ID, timestamp, and revenue.
+    - DataSets/costs_us.csv → Marketing spend by source and date.
+
+- Analysis Approach:
+    - Conduct cohort analysis to evaluate user conversion times.
+    - Track LTV, CAC, and ROMI across devices and acquisition sources.
+    - Use visualizations to compare performance over time and across channels.
+
+- Deliverables:
+    - A Jupyter Notebook with code (in code cells) and explanations (in markdown cells).
+    - Graphs and metrics supporting insights into user behavior, sales performance, and marketing ROI.
+    - Final recommendations for the marketing team on budget allocation and high-performing channels.
 
 ---
 
 ## 🧮 Data Dictionary
 
-This project has N different tables.
+This project has 3 different tables.
 
-- `dataset.csv` (describe content)
-    `column:name`: description.
+- `visits_log_us.csv` (server logs with data about website visits)
+    `column:Uid`: Unique user identifier.
+    `column:Device`: User's device.
+  
+
+The visits table (server logs with data about website visits):
+
+Uid: Unique user identifier.
+Device: User's device.
+Start Ts: Session start date and time.
+End Ts: Session end date and time.
+Source Id: Identifier of the ad source the user is using.
+All dates in this table are in YYYY-MM-DD format.
+
+The orders table (data about orders):
+
+Uid: Unique identifier of the user who placed an order.
+Buy Ts: Date and time of the order. Revenue: Showz's revenue from the order.
+The costs table (data about marketing expenses):
+
+source_id: Ad source identifier.
+dt: Date.
+costs: Spending on this ad source on this day.
 
 
 ---
@@ -73,7 +133,6 @@ The notebook `00-guided-analysis_foundations.ipynb` reflects an early stage of m
 - os, pathlib, sys, pandas, NumPy, Matplotlib, seaborn, IPython.display, scipy.stats
 - Jupyter Notebook
 - Git & GitHub for version control
--
 
 ---
 
