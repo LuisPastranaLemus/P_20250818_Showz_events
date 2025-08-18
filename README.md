@@ -60,9 +60,9 @@ Project Info explanation
 
 This project has 3 different tables.
 
-- `visits_log_us.csv` (server logs with data about website visits)
-    `column:Uid`: Unique user identifier.
-    `column:Device`: User's device.
+- `visits_log_us.csv` (server logs with data about website visits)   
+    `column:Uid`: Unique user identifier.   
+    `column:Device`: User's device.   
   
 
 The visits table (server logs with data about website visits):
