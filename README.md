@@ -63,27 +63,18 @@ This project has 3 different tables.
 - `visits_log_us.csv` (server logs with data about website visits)   
     `column:Uid`: Unique user identifier.   
     `column:Device`: User's device.   
-  
+    `column:Start TS`: Session start date and time.
+    `column:End Ts`: Session end date and time.
+    `column:Source Id`: Identifier of the ad source the user is using.   
 
-The visits table (server logs with data about website visits):
+- `orders_log_us.csv` (data about orders)   
+    `column:Uid`: Unique identifier of the user who placed an order.   
+    `column:Buy TS`: Date and time of the order. Revenue: Showz's revenue from the order.   
 
-Uid: Unique user identifier.
-Device: User's device.
-Start Ts: Session start date and time.
-End Ts: Session end date and time.
-Source Id: Identifier of the ad source the user is using.
-All dates in this table are in YYYY-MM-DD format.
-
-The orders table (data about orders):
-
-Uid: Unique identifier of the user who placed an order.
-Buy Ts: Date and time of the order. Revenue: Showz's revenue from the order.
-The costs table (data about marketing expenses):
-
-source_id: Ad source identifier.
-dt: Date.
-costs: Spending on this ad source on this day.
-
+- `costs_us.csv` (data about marketing expenses)   
+    `column:source_id`: Ad source identifier.   
+    `column:dt`: Date.   
+    `column:costs`: Spending on this ad source on this day.
 
 ---
 
