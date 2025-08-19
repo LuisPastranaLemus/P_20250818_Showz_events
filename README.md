@@ -40,9 +40,9 @@ Key questions:
 Project Info explanation
 
 - Datasets:
-    - DataSets/visits_log_us.csv → User visits with session timestamps, device, and acquisition source.
-    - DataSets/orders_log_us.csv → Orders with user ID, timestamp, and revenue.
-    - DataSets/costs_us.csv → Marketing spend by source and date.
+    - data/raw/visits_log_us.csv → User visits with session timestamps, device, and acquisition source.
+    - data/raw/orders_log_us.csv → Orders with user ID, timestamp, and revenue.
+    - data/raw/costs_us.csv → Marketing spend by source and date.
 
 - Analysis Approach:
     - Conduct cohort analysis to evaluate user conversion times.
@@ -69,7 +69,8 @@ This project has 3 different tables.
 
 - `orders_log_us.csv` (data about orders)   
     `column:Uid`: Unique identifier of the user who placed an order.   
-    `column:Buy TS`: Date and time of the order. Revenue: Showz's revenue from the order.   
+    `column:Buy TS`: Date and time of the order. 
+    `column:Revenue`: Showz's revenue from the order.   
 
 - `costs_us.csv` (data about marketing expenses)   
     `column:source_id`: Ad source identifier.   
